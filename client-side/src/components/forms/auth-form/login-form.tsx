@@ -12,7 +12,7 @@ export default function LoginForm({ initialValues, onLogin }: LoginProps) {
         initialValues={initialValues}
         validationSchema={loginSchema}
         onSubmit={(values) => {
-          console.log(values);
+          // console.log(values);
           onLogin(values);
         }}
       >
