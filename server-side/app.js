@@ -9,9 +9,10 @@ const userRoutes = require("./src/routes/userRoutes");
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 const OpenApiValidator = require("express-openapi-validator");
+const { corsOption } = require("./src/middlewares/corsOpt");
 
 const app = express();
-app.use(cors());
+app.use(cors(corsOption));
 app.use(express.json());
 
 dbConnection();
