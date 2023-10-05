@@ -1,6 +1,5 @@
 const express = require("express");
-const { verifyJWT } = require("../middlewares/verifyJWT");
-const { checkRole } = require("../middlewares/checkRole");
+const { verifyJWT, checkRole } = require("../middlewares");
 const { viewAllAssignedTasks, viewAssignedTask, updateAssignedTask, viewTasksByStatuses } = require("../controllers/userController");
 
 const router = express.Router();

@@ -1,6 +1,5 @@
 const express = require("express");
-const { verifyJWT } = require("../middlewares/verifyJWT");
-const { checkRole } = require("../middlewares/checkRole");
+const { verifyJWT, checkRole } = require("../middlewares");
 const { getAllGroups, getAllUsers, createGroup, viewGroupByID, assignLeaderToGroup, assignMemberToGroup, createProject, getAllProjects } = require("../controllers/adminController");
 
 const router = express.Router();

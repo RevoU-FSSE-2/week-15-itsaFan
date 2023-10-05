@@ -1,7 +1,6 @@
 const express = require("express");
 const { register, login, getCurrentUserData } = require("../controllers/authController");
-const { verifyJWT } = require("../middlewares/verifyJWT");
-const { xRequestId } = require("../middlewares/xRequestId");
+const { xRequestId, verifyJWT } = require("../middlewares");
 
 const router = express.Router();
 
