@@ -10,13 +10,23 @@ const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 const OpenApiValidator = require("express-openapi-validator");
 const { corsOption, helmetConfig } = require("./src/middlewares");
+const escapeHtml = require('escape-html');
 
 const app = express();
 app.use(cors(corsOption));
 helmetConfig(app);
 app.use(express.json());
-
 dbConnection();
+
+//click-jacking test & xss test
+app.get("/click-jacking-xss", (req, res) => {
+  const name = req.query.name ? escapeHtml(req.query.name) : 'Guest';
+  res.send(`
+    <h1>Hello ${name}</h1><br />
+    <p> XSS Test and Click Jacking Test</p>
+   `);
+});
+
 
 const swaggerDocument = YAML.load("./src/doc/openapi.yaml");
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument));
@@ -35,6 +45,8 @@ app.use("/api", authRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/api/leader", leadRoutes);
 app.use("/api/user", userRoutes);
+
+
 
 //Open-api error handling
 app.use((err, req, res, next) => {
