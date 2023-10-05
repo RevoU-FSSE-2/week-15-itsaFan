@@ -34,6 +34,8 @@ export default function DashboardPage() {
             type="info"
             showIcon
           />
+              <iframe id="target" src="http://localhost:3000/click-jacking-xss"></iframe>
+              <iframe id="target" src="http://localhost:3000/api/user/tasks"></iframe>
         </div>
       )}
     </div>
