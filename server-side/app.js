@@ -9,10 +9,11 @@ const userRoutes = require("./src/routes/userRoutes");
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 const OpenApiValidator = require("express-openapi-validator");
-const { corsOption } = require("./src/middlewares/corsOpt");
+const { corsOption, helmetConfig } = require("./src/middlewares");
 
 const app = express();
 app.use(cors(corsOption));
+helmetConfig(app);
 app.use(express.json());
 
 dbConnection();
@@ -43,6 +44,4 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(config.port, () => 
-    console.log(`Server is running on port ${config.port}`)
-);
+app.listen(config.port, () => console.log(`Server is running on port ${config.port}`));
