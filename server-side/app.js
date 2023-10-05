@@ -2,10 +2,7 @@ const express = require("express");
 const config = require("./src/config/config");
 const cors = require("cors");
 const dbConnection = require("./src/utils/db-util");
-const authRoutes = require("./src/routes/authRoutes");
-const adminRoutes = require("./src/routes/adminRoutes");
-const leadRoutes = require("./src/routes/leadRoutes");
-const userRoutes = require("./src/routes/userRoutes");
+const routes = require("./src/routes");
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 const OpenApiValidator = require("express-openapi-validator");
@@ -41,12 +38,7 @@ app.use(
   })
 );
 
-app.use("/api", authRoutes);
-app.use("/api/admin", adminRoutes);
-app.use("/api/leader", leadRoutes);
-app.use("/api/user", userRoutes);
-
-
+app.use(routes);
 
 //Open-api error handling
 app.use((err, req, res, next) => {
