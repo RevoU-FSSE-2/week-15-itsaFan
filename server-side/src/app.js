@@ -6,13 +6,14 @@ const routes = require("./routes");
 const swaggerUi = require("swagger-ui-express");
 const YAML = require("yamljs");
 const OpenApiValidator = require("express-openapi-validator");
-const { corsOption, helmetConfig } = require("./middlewares");
+const { corsOption, helmetConfig, morganConfig } = require("./middlewares");
 const escapeHtml = require("escape-html");
 
 //general setup
 const app = express();
 app.use(cors(corsOption));
 helmetConfig(app);
+morganConfig(app);
 app.use(express.json());
 dbConnection();
 
@@ -29,7 +30,6 @@ app.get("/click-jacking-xss", (req, res) => {
 app.get("/test-cors", (req, res) => {
   res.json({ message: "CORS whitelist & methods unit-testing" });
 });
-
 
 //Swagger Config
 const swaggerDocument = YAML.load("./src/doc/openapi.yaml");

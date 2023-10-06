@@ -3,6 +3,7 @@ const { checkRole } = require("./checkRole");
 const { xRequestId } = require("./xRequestId");
 const { helmetConfig } = require("./helmet");
 const { corsOption } = require("./corsOpt");
+const { morganConfig } = require("./morgan");
 
 module.exports = {
   verifyJWT,
@@ -10,4 +11,5 @@ module.exports = {
   xRequestId,
   corsOption,
   helmetConfig,
+  morganConfig,
 };
