@@ -26,7 +26,7 @@ The purpose of this assignment is to help us understand http headers and its usa
 - Milestones:
   - X-Request-Id for every GET, POST, DELETE, PUT requests.
   - CORS: restricting access-control-origin only for two clients.
-  - CORS: restricting preflight access-control-methods for `Client Y` only `GET` `POST`.
+  - CORS: restricting & customizing preflight access-control-methods for two clients: `Main Client` able to do all methods while  `Alt Client` only `GET` `POST`.
   - Prevent click-jacking & xss attact by using `helmet` package.
   - Perform unit test for `CORS` and `Security Headers`.
   - Auto create log folder & file for tracking request and response by using `morgan` package.
