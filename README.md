@@ -66,6 +66,24 @@ Login with `User` account to see the `iframe` tag doesn't work.
 ```
 
 #### Screenshots
-![Unit Test](./w15-readme-ss/tests.png)
 
+Unit Testings
+
+![Unit Test](./w15-readme-ss/tests.png)
+---
+Unable to use API because CORS origin 
+
+![Whitelist](./w15-readme-ss/not-listed-origin-ss.png)
+---
+Unable to delete because method restriction 
+
+![Delete](./w15-readme-ss/alt-client-cors-restriction.png)
+---
+X-Request-Id Example: 
+
+![XRequestId](./w15-readme-ss/xreqid-ss.png)
+---
+![XRequestId](./w15-readme-ss/xreqid-ss2.png)
+
+---
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/A8ztcAuX)
