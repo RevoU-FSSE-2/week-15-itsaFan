@@ -1,9 +1,10 @@
 const app = require("../src/app");
 const request = require("supertest");
 const { expect } = require("chai");
+const config = require("../src/config/config");
 
-const mainUrl = "http://localhost:5173";
-const altUrl = "http://localhost:5174";
+const mainUrl = config.mainUrl;
+const altUrl = config.altUrl;
 const randomUrl = "http://random.com";
 
 describe("CORS Origin Whitelist Test", () => {

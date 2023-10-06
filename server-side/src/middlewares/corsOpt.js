@@ -1,13 +1,12 @@
-const mainUrl = "http://localhost:5173";
-const altUrl = "http://localhost:5174";
+const config = require("../config/config");
+
 
 const corsOption = (req, callback) => {
-
-  const originUrl = [mainUrl, altUrl];
+  const originUrl = [config.mainUrl, config.altUrl];
   let corsOptions;
 
   if (originUrl.includes(req.header("Origin"))) {
-    if (req.header("Origin") === mainUrl) {
+    if (req.header("Origin") === config.mainUrl) {
       corsOptions = { origin: true, methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"] };
     } else {
       corsOptions = { origin: true, methods: ["GET", "POST"] };
