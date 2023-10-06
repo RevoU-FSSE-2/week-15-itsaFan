@@ -47,9 +47,11 @@ The purpose of this assignment is to help us understand http headers and its usa
 ### Deployment && Screenshots
 
 **Notes: this project have two clients to test the CORS preflight methods restriction**<br>
-Try login to each client with these accounts below:
+Try login to each client with these accounts below.
+Login with `Leader` account and try deleting or editing a task on each client, you will see that on `Alt Client` you are not able to delete or edit.<br>
+Login with `User` account to see the `iframe` tag doesn't work.
 
-#### Link
+#### Website Link: [Main Client](https://steff-w15-main.netlify.app/) & [Alt Client](https://steff-w15-alt.netlify.app/)
 
 ```json
 {
@@ -62,5 +64,8 @@ Try login to each client with these accounts below:
     "password": "zxc12345"
 }
 ```
+
+#### Screenshots
+![Unit Test](./w15-readme-ss/tests.png)
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/A8ztcAuX)
