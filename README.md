@@ -24,7 +24,7 @@ This project is made for RevoU assignment.<br>
 The purpose of this assignment is to help us understand http headers and its usage. To learn and practice about CORS, implementing security headers, and practice about layering structure for middlewares.
 
 - Milestones:
-  - X-Request-Id for every GET, POST, DELETE, PUT requests for `Leader  account`.
+  - X-Request-Id for every GET, POST, DELETE, PUT requests.
   - CORS: restricting access-control-origin only for two clients.
   - CORS: restricting preflight access-control-methods for `Client Y` only `GET` `POST`.
   - Prevent click-jacking & xss attact by using `helmet` package.
@@ -43,5 +43,24 @@ The purpose of this assignment is to help us understand http headers and its usa
 
 - [CORS Test](./server-side/tests/cors.test.js)
 - [Security Headers Test](./server-side/tests/security-headers.test.js)
+
+### Deployment && Screenshots
+
+**Notes: this project have two clients to test the CORS preflight methods restriction**<br>
+Try login to each client with these accounts below:
+
+#### Link
+
+```json
+{
+    "username": "User",
+    "password": "zxc12345"
+}
+
+{
+    "username": "Leader",
+    "password": "zxc12345"
+}
+```
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/A8ztcAuX)
