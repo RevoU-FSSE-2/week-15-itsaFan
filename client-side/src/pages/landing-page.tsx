@@ -12,10 +12,19 @@ export default function LandingPage() {
             <p>The content for 'user' role is not available yet.</p>
             <p>So if you try to login with your own registered account, you will be directed to blank page.</p>
             <Divider />
-            <p>For this RevoU assignment week 13, only need an account with 'leader' role.</p>
+            <p>For this RevoU assignment week 15, only need an account with 'leader' role.</p>
             <p>This account will be able to perform CRUD on Task. </p>
             <p>I will provide you with the account, you can try login and test the functionality.</p>
             <p>Username: Leader</p>
+            <p>password: zxc12345</p>
+            <Divider />
+            <p className="font-bold">Added For Assignment Week 15:</p>
+            <p>To see or check if this app protected again common web vulnerabilites like click-jacking</p>
+            <p>At the user dashboard, there are two iframe</p>
+            <p>it will not display anything because the server is using helmet</p>
+            <p>To guard against frame tag, and only allow self-origin</p>
+            <p>Try Login an account here:</p>
+            <p>Username: User</p>
             <p>password: zxc12345</p>
             <Divider />
             <p className="font-semibold text-base">To login or Register, click on the Avatar Icon at the Top Right Screen</p>
